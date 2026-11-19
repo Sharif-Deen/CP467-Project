@@ -5,7 +5,7 @@ PROJECT_DIR = os.path.dirname(
     os.path.dirname(os.path.abspath(__file__))
 )
 
-DATASET_DIR = os.path.join(PROJECT_DIR, "Dataset")
+DATASET_DIR = os.path.join(PROJECT_DIR, "Training")
 OUTPUT_DIR = os.path.join(PROJECT_DIR, "Processed Dataset")
 
 # Dataset subfolders
