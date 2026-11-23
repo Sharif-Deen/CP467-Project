@@ -130,8 +130,8 @@ def predictTestImages(model):
     testingPredictions = testingFeatures[["image_id"]].copy()
 
     ## Predict and set new values from testing and export CSV result
-    testingPredictions["diagnosis"] = model.predict(testingFeatures[FEATURE_COLUMNS])
-    testingPredictions["referral_flag"] = (testingPredictions["diagnosis"] >= 2).astype(int)
+    predictionResults = model.predict(testingFeatures[FEATURE_COLUMNS])
+    testingPredictions["diagnosis"] = predictionResults
 
     testingPredictions.to_csv(f"{RESULTS_FOLDER}/testing_predictions.csv", index = False)
 
